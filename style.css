@@ -2,14 +2,13 @@ body{
   background-color: #003049;
   padding: 0;
   margin: 0;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 /* ?Få den i mitten av skärmen, fixa det senare */
 .char{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* !Bakgrunds namnet */
@@ -20,17 +19,19 @@ body{
   font-family: sans-serif;
   letter-spacing: 10px;
   -webkit-text-fill-color: transparent;
-  z-index: 1;
+  z-index: -10;
+  margin: 0;
   text-transform: uppercase;
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .char img{
   z-index: 2;
   width: 20rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(40%, -40%);
 }
 
 
@@ -40,26 +41,6 @@ body{
   text-transform: uppercase;
 }
 
-.star::before{
-  content:"";
-  width: 10px;
-  height: 10px;
-  color: White;
+.space{
+  height: 80rem;
 }
-
-
-.star{
-  content:"";
-  width: 10px;
-  height: 10px;
-  color: green;
-}
-
-
-.star::after{
-  content:"";
-  width: 10px;
-  height: 10px;
-  color: White;
-}
-
