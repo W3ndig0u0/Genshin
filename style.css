@@ -17,8 +17,9 @@ body{
 }
 
 a,li,ul{
-  text-decoration: none;
+  text-decoration: none;  
   list-style-type: none;
+
 }
 
 ul{
