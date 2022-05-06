@@ -1,3 +1,11 @@
+*{
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 body{
   background-color: #003049;
   padding: 0;
@@ -5,10 +13,54 @@ body{
   overflow-x: hidden;
 }
 
-.ReagionCardFlex{
+
+/* !Reagion Section */
+.ReagionContainer
+{
+  padding: 40px;
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-image: linear-gradient(90deg, rgba(8, 1, 5, 0.6), rgba(79, 0, 112, 0.4) ),url(https://androspel.com/wp-content/uploads/2021/10/Genshin-impact-inazuma-region.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+
+.smallFlex
+{
   display:flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+
+.smallFlex h2{
+  font-size:2em;
+}
+
+.smallFlex p{
+  font-size: 0.8em;
+}
+
+.reagionText{
+  max-width: 40rem; 
+  margin:0;
+  font-size: 2em;
+  font-family: sans-serif;
+  letter-spacing: 4px;
+  color: White;
+}
+
+.symbolImg
+{
+  width: 8rem;
+}
+
+
+/* !Reagion card */
+.ReagionCardFlex{
+  display:flex;
 }
 
 .InazumaCard
@@ -20,39 +72,37 @@ body{
   background-image: linear-gradient(90deg, rgba(94, 83, 78, 0.3), rgba(184, 109, 56, 0.2) ),url(https://wallpapercave.com/wp/wp8657159.png);
 }
 
+.MondstadtCard{
+  background-image: linear-gradient(90deg, rgb(76, 56, 56,0.4), rgba(111, 184, 56, 0.2) ), url(http://genshintool.com/wp-content/uploads/2020/12/unnamed-file-2839.jpg);
+}
+
 .reagionCard{
   border-radius:10px;
-  width: 20rem;
-  height: 30rem;
-  padding: 30px;
+  width: 13rem;
+  height: 18rem;
+  padding:10px;
   margin: 30px;
-  box-shadow: rgb(0 0 0 / 35%) 5px 10px 10px;
+  box-shadow: rgb(0 0 0 / 45%) 9px 14px 14px;
 
   background-position: center;
   background-repeat: no-repeat
 }
 
-
-.reagionCard .symbolImg{
-  width: 8rem;
-  margin-top: 18rem;
+.reagionCard .cardSymbolImg
+{
+  width: 6rem;
+  margin-top: 8rem;
 }
 
-.reagionName{
+.reagionName
+{
   margin:0;
-  font-size: 3em;
+  font-size: 2em;
   font-family: sans-serif;
-  letter-spacing: 10px;
+  letter-spacing: 4px;
   color: White;
 }
 
-
-/* ?Få den i mitten av skärmen, fixa det senare */
-.char{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* !Bakgrunds namnet */
 .charBackName
@@ -72,18 +122,6 @@ body{
   transform: translate(-50%, -50%); */
 }
 
-.char img{
-  z-index: 2;
-  width: 20rem;
-}
-
-
-.left name{
-  font-size: 5em;
-  font-family: sans;
-  text-transform: uppercase;
-}
-
 .space{
-  height: 80rem;
+  height: 20rem;
 }
