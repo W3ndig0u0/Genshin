@@ -11,15 +11,22 @@ body{
   align-items: center;
 }
 
-.reagionCard{
+.InazumaCard
+{
   background-image: linear-gradient(90deg, rgba(8, 1, 5, 0.5), rgba(79, 0, 112, 0.3) ),url(https://androspel.com/wp-content/uploads/2021/10/Genshin-impact-inazuma-region.jpg);
-  /* background-image: url(https://androspel.com/wp-content/uploads/2021/10/Genshin-impact-inazuma-region.jpg); */
+}
+
+.LiyueCard{
+  background-image: linear-gradient(90deg, rgba(94, 83, 78, 0.3), rgba(184, 109, 56, 0.2) ),url(https://wallpapercave.com/wp/wp8657159.png);
+}
+
+.reagionCard{
   border-radius:10px;
   width: 20rem;
   height: 30rem;
-  padding: 20px;
-  margin: 20px;
-  /* box-shadow: rgb(0 0 0 / 35%) 5px 10px 10px; */
+  padding: 30px;
+  margin: 30px;
+  box-shadow: rgb(0 0 0 / 35%) 5px 10px 10px;
 
   background-position: center;
   background-repeat: no-repeat
