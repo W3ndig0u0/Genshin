@@ -19,7 +19,7 @@ body{
   height: 30rem;
   padding: 20px;
   margin: 20px;
-  box-shadow: rgb(0 0 0 / 35%) 5px 10px 10px;
+  /* box-shadow: rgb(0 0 0 / 35%) 5px 10px 10px; */
 
   background-position: center;
   background-repeat: no-repeat
