@@ -1,0 +1,76 @@
+/* !Header */
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 48, 73,0.6);
+}
+
+.headerContainer{
+  margin: 40px;
+  margin-top:0;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 0;
+}
+
+/* !Logo */
+.logo img{
+  color: White;
+  width: 10rem;
+  transition: 300ms ease-out;
+}
+
+.logo img:hover,
+.logo img:active{
+  transform:scale(1.1);
+}
+
+/* !Links */
+.links ul{
+  display: flex;
+}
+
+.links a{
+  color: White;
+}
+
+.links a{
+  margin: 10px;
+  font-size:18px;
+  transition: 500ms ease;
+}
+
+.links a:hover,
+.links a:active{
+  font-size:22px;
+  margin: 14px;
+  color:#F77F00;
+}
+
+
+/* !Knapp */
+.download button{
+  background-color: #D62828;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition:400ms ease-in-out;
+}
+
+
+.download button:hover,
+.download button:active{
+  font-size:20px;
+  color:#F77F00;
+}
