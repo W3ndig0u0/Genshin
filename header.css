@@ -1,16 +1,17 @@
 /* !Header */
 header {
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0;
+  padding: 0px 40px 0px 40px;
   margin: 0;
-  background-color: rgba(0, 48, 73, 0.6);
+  /* background-color: rgba(0, 48, 73,0.3); */
 }
 
+
 .headerContainer {
-  margin: 40px;
+  margin: 0.3rem;
   margin-top: 0;
   display: flex;
   justify-content: space-between;
@@ -48,11 +49,10 @@ header {
 .links a:hover,
 .links a:active {
   margin: 40px;
-  color: #F77F00;
-  letter-spacing:1.1px;
+  color: #D62828;
+  letter-spacing: 1.1px;
   text-decoration: underline;
 }
-
 
 
 /* !Knapp */
@@ -67,11 +67,11 @@ header {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  transition: 300ms;
+  transition: 300ms ease-out;
 }
 
 
 .download button:hover,
 .download button:active {
-  color: #F77F00;
+  transform: scale(1.1);
 }
