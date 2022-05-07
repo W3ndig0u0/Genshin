@@ -1,9 +1,9 @@
-
 /* !Hero Img */
-.heroImage{
+
+.heroImageSection{
   padding: 40px;
   padding-top: 0px;
-  margin-top: -20px;
+  /* margin-top: -20px; */
   justify-content: space-between;
   align-items: flex-end;
   background-image: 
@@ -13,9 +13,75 @@
   rgba(79, 0, 112, 0.2),
   rgba(0, 48, 73, 1) )
   ,url(https://images8.alphacoders.com/115/thumb-1920-1155168.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
+  z-index: 100;
+
+}
+
+.heroImage{
+  background-size: cover;
+  height: 100vh;
+  /* animation: changeBg 40s infinite; */
+}
+
+/* @keyframes changeBg{
+  0%,100%  {
+     background-image: 
+     linear-gradient(180deg, rgb(0, 48, 73), 
+     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.1), 
+     rgba(79, 0, 112, 0.2),
+     rgba(0, 48, 73, 1) ),
+     url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
+   }
+   
+  25% {
+     background-image: 
+     linear-gradient(180deg, rgb(0, 48, 73), 
+     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.1), 
+     rgba(79, 0, 112, 0.2),
+     rgba(0, 48, 73, 1) ),
+     url("https://images5.alphacoders.com/112/1123013.jpg");
+   }
+
+  50% {      
+     background-image: 
+     linear-gradient(180deg, rgb(0, 48, 73), 
+     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.1), 
+     rgba(79, 0, 112, 0.2),
+     rgba(0, 48, 73, 1) ), 
+     url("https://www.whatspaper.com/wp-content/uploads/2022/02/genshin-impact-wallpaper-whatspaper-3.jpg");
+   }
+
+  75% {      
+     background-image: 
+     linear-gradient(180deg, rgb(0, 48, 73), 
+     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.1), 
+     rgba(79, 0, 112, 0.2),
+     rgba(0, 48, 73, 1) ),
+     url("https://i.pinimg.com/originals/3e/e7/45/3ee7459cfdbce3cce499d2fd0583f5a9.jpg");
+   }
+} */
+
+@keyframes changeBg{
+   0%,100%  {
+     background-image: url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
+    }
+   25% {
+     background-image: url("https://images5.alphacoders.com/112/1123013.jpg");
+    }
+    
+   50% {
+     background-image: url("https://www.whatspaper.com/wp-content/uploads/2022/02/genshin-impact-wallpaper-whatspaper-3.jpg");
+    }
+
+   75% {
+     background-image: url("https://i.pinimg.com/originals/3e/e7/45/3ee7459cfdbce3cce499d2fd0583f5a9.jpg");
+    }
 }
 
 .heroImageContainer{
@@ -23,7 +89,7 @@
 }
 
 .heroImage .title{
-  font-size: 5em;
+  font-size: 4.5em;
   max-width: 45vw;
   color:White;
 }
@@ -43,6 +109,7 @@
   margin: 20px;
   margin-left: 0px;
   opacity: 0.8;
+  cursor: pointer;
 
   transition: 200ms;
   transition: transform 300ms ease-out;
