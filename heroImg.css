@@ -1,37 +1,36 @@
 /* !Hero Img */
 
-.heroImageSection{
-  padding: 40px;
-  padding-top: 0px;
-  /* margin-top: -20px; */
-  justify-content: space-between;
+.heroImageSection {
+  /* justify-content: space-between;
   align-items: flex-end;
-  background-image: 
-  linear-gradient(180deg, rgb(0, 48, 73), 
-  rgba(79, 0, 112, 0.2),
-  rgba(79, 0, 112, 0.1), 
-  rgba(79, 0, 112, 0.2),
-  rgba(0, 48, 73, 1) )
-  ,url(https://images8.alphacoders.com/115/thumb-1920-1155168.jpg);
+  background-image:
+    linear-gradient(180deg, rgb(0, 48, 73),
+      rgba(79, 0, 112, 0.2),
+      rgba(79, 0, 112, 0.1),
+      rgba(79, 0, 112, 0.2),
+      rgba(0, 48, 73, 1));
   background-size: cover;
   height: 100vh;
-  z-index: 100;
+  z-index: 100; */
 
 }
 
-.heroImage{
+.heroImage {
+  margin: 0;
+  z-index: 1;
+  padding: 40px;
   background-size: cover;
   height: 100vh;
-  /* animation: changeBg 40s infinite; */
+  animation: changeBg 10s infinite;
 }
 
-/* @keyframes changeBg{
+@keyframes changeBg{
   0%,100%  {
      background-image: 
      linear-gradient(180deg, rgb(0, 48, 73), 
-     rgba(79, 0, 112, 0.2),
-     rgba(79, 0, 112, 0.1), 
-     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.3),
+     rgba(79, 0, 112, 0.2), 
+     rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ),
      url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
    }
@@ -39,9 +38,9 @@
   25% {
      background-image: 
      linear-gradient(180deg, rgb(0, 48, 73), 
-     rgba(79, 0, 112, 0.2),
-     rgba(79, 0, 112, 0.1), 
-     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.3),
+     rgba(79, 0, 112, 0.2), 
+     rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ),
      url("https://images5.alphacoders.com/112/1123013.jpg");
    }
@@ -49,9 +48,9 @@
   50% {      
      background-image: 
      linear-gradient(180deg, rgb(0, 48, 73), 
-     rgba(79, 0, 112, 0.2),
-     rgba(79, 0, 112, 0.1), 
-     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.3),
+     rgba(79, 0, 112, 0.2), 
+     rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ), 
      url("https://www.whatspaper.com/wp-content/uploads/2022/02/genshin-impact-wallpaper-whatspaper-3.jpg");
    }
@@ -59,52 +58,60 @@
   75% {      
      background-image: 
      linear-gradient(180deg, rgb(0, 48, 73), 
-     rgba(79, 0, 112, 0.2),
-     rgba(79, 0, 112, 0.1), 
-     rgba(79, 0, 112, 0.2),
+     rgba(79, 0, 112, 0.3),
+     rgba(79, 0, 112, 0.2), 
+     rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ),
-     url("https://i.pinimg.com/originals/3e/e7/45/3ee7459cfdbce3cce499d2fd0583f5a9.jpg");
+     url("https://images.alphacoders.com/111/thumb-1920-1112818.jpg");
    }
-} */
-
-@keyframes changeBg{
-   0%,100%  {
-     background-image: url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
-    }
-   25% {
-     background-image: url("https://images5.alphacoders.com/112/1123013.jpg");
-    }
-    
-   50% {
-     background-image: url("https://www.whatspaper.com/wp-content/uploads/2022/02/genshin-impact-wallpaper-whatspaper-3.jpg");
-    }
-
-   75% {
-     background-image: url("https://i.pinimg.com/originals/3e/e7/45/3ee7459cfdbce3cce499d2fd0583f5a9.jpg");
-    }
 }
 
-.heroImageContainer{
+/* @keyframes changeBg {
+
+  0%,
+  100% {
+    background-image: url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
+  }
+
+  25% {
+    background-image: url("https://images5.alphacoders.com/112/1123013.jpg");
+  }
+
+  50% {
+    background-image: url("https://www.whatspaper.com/wp-content/uploads/2022/02/genshin-impact-wallpaper-whatspaper-3.jpg");
+  }
+
+  75% {
+    background-image: url("https://images5.alphacoders.com/116/thumb-1920-1167777.png");
+  }
+} */
+
+.heroImageContainer {
   padding-top: 15vh;
 }
 
-.heroImage .title{
+.heroImage .title {
   font-size: 4.5em;
   max-width: 45vw;
-  color:White;
+  color: White;
 }
 
-.heroImage p{
+.heroImage p {
   font-size: 1.1em;
   max-width: 45vw;
-  color:white;
+  color: white;
   opacity: 0.8;
   line-height: 1.5em;
   margin-bottom: 30px;
+	font-weight: 400;
+	text-align: justify;
   margin-top: 30px;
+
+  background-color: rgba(0, 48, 73, 0.1);
+
 }
 
-.heroImage .downloads img{
+.heroImage .downloads img {
   width: 10rem;
   margin: 20px;
   margin-left: 0px;
@@ -119,7 +126,7 @@
 }
 
 .heroImage .downloads img:hover,
-.heroImage .downloads img:active{
+.heroImage .downloads img:active {
   transform: scale(1.1);
   opacity: 1;
   border: solid 2px White;
