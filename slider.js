@@ -45,7 +45,7 @@ function Timer(){
     CheckSliderInView();
     ResizeSliderSize();
     console.log("aaa")
-  }, 600);
+  }, 500);
 }
 
 
@@ -70,7 +70,7 @@ document.addEventListener("click", e => {
   if (translateX >= maxX) 
   {
     document.getElementById("slider").style.transform = "translateX(0%)";
-    translateX = 30;
+    translateX = 0;
   }
 
   else{
