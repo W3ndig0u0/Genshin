@@ -12,7 +12,7 @@
   display: flex;
   flex-grow: 1;
   width: 100%;
-  transition: 600ms ease-out;  
+  transition: 800ms ease-in-out;  
 }
 
 /* !Fram o tillbaka knapparna */
@@ -45,4 +45,5 @@
   margin: 0 0.5rem;
   /* height: 20rem; */
   text-align: center;
+  transition:500ms;
 }
