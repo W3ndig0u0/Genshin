@@ -1,29 +1,68 @@
 let leftHandle = document.getElementById("prev");
 let rightHandle = document.getElementById("next");
-let slider = document.querySelector("slider");
+let sliderContainer = document.getElementById("sliderContainer");
 
 var translateX = 30;
 
-var maxX = 30*5;
+var maxX = translateX * 5;
 
-var inViewList = [];
+
+// !ger klassen InView till de objekten som är i skärmen
+function CheckSliderInView() {
+  for (let index = 0; index < sliderContainer.childNodes[3].children.length; index++) {
+
+    if (isInViewport(sliderContainer.childNodes[3].children[index])) {
+      sliderContainer.childNodes[3].children[index].classList.add('InView');
+    }
+
+    else if (!isInViewport(sliderContainer.childNodes[3].children[index])) {
+      sliderContainer.childNodes[3].children[index].classList.remove('InView');
+    }
+  
+  }
+}
+
+// !Kollar om objekten är i skärmen
+function isInViewport(elem) {
+  var bounding = elem.getBoundingClientRect();
+  return (
+    bounding.left >= 0 &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// !Resizar saker
+function ResizeSliderSize() {
+  for (let index = 0; index < document.querySelectorAll(".InView").length; index++) {
+    document.querySelectorAll(".InView")[index].style.transform = "scale(0." + (9 - index) + ")";
+  }
+  console.log(document.querySelectorAll(".InView"))
+}
+
+function Timer(){
+  setTimeout(function(){
+    // !Körs funktionen om en .box har ändrats, den resizar boxen
+    CheckSliderInView();
+    ResizeSliderSize();
+    console.log("aaa")
+  }, 600);
+}
+
+
+Timer();
 
 document.addEventListener("click", e => {
-  
   if (e.target == leftHandle) {
     CheckSliderInView();
     MoveLeft();
+    Timer();
   }
 
   else if (e.target == rightHandle) {
     CheckSliderInView();
     MoveRight();
+    Timer();
   }
-
-
-  // !Körs funktionen om en .box har ändrats, den resizar boxen
-  InViewArray();
-  ResizeSliderSize();
 
 
   function MoveRight() {
@@ -62,46 +101,5 @@ document.addEventListener("click", e => {
     // }
   }
 
-  // !ger klassen InView till de objekten som är i skärmen
-  function CheckSliderInView() {
-    for (let index = 0; index < e.target.parentNode.childNodes[3].children.length; index++) {
-      // console.log(isInViewport(e.target.parentNode.childNodes[3].children[index]));
-
-      if (isInViewport(e.target.parentNode.childNodes[3].children[index])) {
-        e.target.parentNode.childNodes[3].children[index].classList.add('InView');
-      }
-
-      else if (!isInViewport(e.target.parentNode.childNodes[3].children[index])) {
-        e.target.parentNode.childNodes[3].children[index].classList.remove('InView');
-      }
-    
-    }
-  }
-
-  function InViewArray() {
-    for (let index = 0; index < document.querySelectorAll(".InView").length; index++) {
-      inViewList[index] = document.querySelectorAll(".InView")[index]
-    }
-  }
-
-
-  // !Resizar saker
-  function ResizeSliderSize() {
-    for (let index = 0; index < inViewList.length; index++) {
-      // console.log(inViewList[index]);
-      // const reverseList = inViewList.reverse();
-
-      inViewList[index].style.transform = "scale(0." + (9 - index) + ")";
-    }
-  }
-
-  // !Kollar om objekten är i skärmen
-  function isInViewport(elem) {
-    var bounding = elem.getBoundingClientRect();
-    return (
-      bounding.left >= 0 &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
 
 })

@@ -1,9 +1,26 @@
 /* !Container för slidern */
+.charSection{
+  padding: 40px;
+  background-image: 
+  linear-gradient(180deg, rgb(0, 48, 73), 
+  rgba(214, 40, 40, 0.2),  
+  rgba(214, 40, 40, 0.1),
+  rgba(214, 40, 40, 0.2),
+  rgba(0, 48, 73, 1) )
+  ,url(https://images7.alphacoders.com/110/thumb-1920-1107814.jpg);
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+}
+
 .charSlider{
   display: flex;
   justify-content: center;
+
   max-width:100vw;
   overflow: hidden;
+  /* margin-top:50rem ; */
 }
 
 /* !Slidern */
@@ -12,19 +29,19 @@
   display: flex;
   flex-grow: 1;
   width: 100%;
-  transition: 800ms ease-in-out;  
+  transition: 600ms ease-in-out;  
 }
 
 /* !Fram o tillbaka knapparna */
 .handle{
-  background-color:rgba(122, 43, 43,0.3);
+
+  background-color:rgba(0, 48, 73,0.3);
   flex-grow: 0;
   width: 5%;
   z-index: 10;
   transition: 200ms;
   cursor: pointer;
   overflow: hidden;
-  border-radius:10px;
 
   font-size: 7em;
   display: flex;
@@ -34,7 +51,7 @@
 
 .handle:hover,
 .handle:focus{  
-  background-color:rgb(122, 43, 63);
+  background-color:rgba(0, 48, 73);
   transform:scale(1.1);
 }
 
@@ -43,7 +60,7 @@
   flex: 0 0 30%;
   padding: 3rem;
   margin: 0 0.5rem;
-  /* height: 20rem; */
+  /* height: 30rem; */
   text-align: center;
   transition:500ms;
 }
