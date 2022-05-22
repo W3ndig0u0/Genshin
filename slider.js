@@ -18,7 +18,7 @@ function CheckSliderInView() {
     else if (!isInViewport(sliderContainer.childNodes[3].children[index])) {
       sliderContainer.childNodes[3].children[index].classList.remove('InView');
     }
-  
+
   }
 }
 
@@ -39,8 +39,8 @@ function ResizeSliderSize() {
   console.log(document.querySelectorAll(".InView"))
 }
 
-function Timer(){
-  setTimeout(function(){
+function Timer() {
+  setTimeout(function () {
     // !Körs funktionen om en .box har ändrats, den resizar boxen
     CheckSliderInView();
     ResizeSliderSize();
@@ -66,17 +66,16 @@ document.addEventListener("click", e => {
 
 
   function MoveRight() {
-  // !Går tillbaka till 1 när man är på den sista
-  if (translateX >= maxX) 
-  {
-    document.getElementById("slider").style.transform = "translateX(0%)";
-    translateX = 0;
-  }
+    // !Går tillbaka till 1 när man är på den sista
+    if (translateX >= maxX) {
+      document.getElementById("slider").style.transform = "translateX(0%)";
+      translateX = 0;
+    }
 
-  else{
-    translateX = Math.round(translateX + 30)
-    document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
-  }
+    else {
+      translateX = Math.round(translateX + 30)
+      document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
+    }
   }
 
   // !När man trycker på prev
@@ -94,10 +93,10 @@ document.addEventListener("click", e => {
     //   translateX = Math.round(translateX + 30)
     //   document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
     // }
-    
+
     // else{
-      translateX = Math.round(translateX - 30)
-      document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
+    translateX = Math.round(translateX - 30)
+    document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
     // }
   }
 
