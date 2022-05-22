@@ -2,10 +2,9 @@ let leftHandle = document.getElementById("prev");
 let rightHandle = document.getElementById("next");
 let sliderContainer = document.getElementById("sliderContainer");
 
-var translateX = 30;
+var translateX = 35;
 
 var maxX = translateX * 5;
-
 
 // !ger klassen InView till de objekten som är i skärmen
 function CheckSliderInView() {
@@ -73,7 +72,7 @@ document.addEventListener("click", e => {
     }
 
     else {
-      translateX = Math.round(translateX + 30)
+      translateX = Math.round(translateX + 35)
       document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
     }
   }
@@ -95,8 +94,6 @@ document.addEventListener("click", e => {
     // }
 
     // else{
-    translateX = Math.round(translateX - 30)
-    document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
     // }
   }
 
