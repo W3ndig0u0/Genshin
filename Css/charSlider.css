@@ -103,7 +103,7 @@
 
 .charSlider .box:hover img{
   top: 0%;
-  transform: scale(0.9) translate(20%, 0%) rotate(5deg);
+  transform: scale(0.9) translate(30%, 0%) rotate(5deg);
   z-index: -20;
     
 }
