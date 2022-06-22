@@ -32,7 +32,7 @@
      rgba(79, 0, 112, 0.2), 
      rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ),
-     url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
+     url("Img/HeroSectionImg/HeroBg1.jpg");
    }
    
   25% {
@@ -42,7 +42,7 @@
      rgba(79, 0, 112, 0.2), 
      rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ),
-     url("https://images5.alphacoders.com/112/1123013.jpg");
+     url("Img/HeroSectionImg/HeroBg2.jpg");
    }
 
   50% {      
@@ -52,7 +52,7 @@
      rgba(79, 0, 112, 0.2), 
      rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ), 
-     url("https://www.whatspaper.com/wp-content/uploads/2022/02/genshin-impact-wallpaper-whatspaper-3.jpg");
+     url("Img/HeroSectionImg/HeroBg3.jpg");
    }
 
   75% {      
@@ -62,15 +62,15 @@
      rgba(79, 0, 112, 0.2), 
      rgba(79, 0, 112, 0.3),
      rgba(0, 48, 73, 1) ),
-     url("https://images.alphacoders.com/111/thumb-1920-1112818.jpg");
+     url("Img/HeroSectionImg/HeroBg4.jpg");
    }
 }
 
-/* @keyframes changeBg {
+ @keyframes changeBg {
 
   0%,
   100% {
-    background-image: url("https://images8.alphacoders.com/115/thumb-1920-1155168.jpg");
+    background-image: url("Img/HeroSectionImg/HeroBg4.jpg");
   }
 
   25% {
@@ -84,7 +84,7 @@
   75% {
     background-image: url("https://images5.alphacoders.com/116/thumb-1920-1167777.png");
   }
-} */
+}
 
 .heroImageContainer {
   padding-top: 15vh;
