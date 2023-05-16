@@ -30,15 +30,23 @@ ul{
 .charBackName
 {
   -webkit-text-stroke: 0.5px White;
-  font-size: 40em;
+  font-size: 20em;
   font-family: sans-serif;
   letter-spacing: 10px;
   color: transparent;
   z-index: -10;
-  margin: 0;
+  margin: 5rem 0px;
   text-transform: uppercase;
+  position: absolute;
+  padding-top: 2rem;
 }
 
-.space{
-  height: 20rem;
+.whiteFont
+{
+  -webkit-text-stroke: 0.5px White;
+  letter-spacing: 10px;
+  color: transparent !important;
+  z-index: -10;
+  font-size: large;
+  text-transform: uppercase;
 }

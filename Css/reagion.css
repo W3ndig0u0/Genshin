@@ -4,6 +4,8 @@
 .ReagionContainer
 {
   padding: 40px;
+  margin-top: 2rem;
+  
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -17,7 +19,7 @@
   
   background-position: center;
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 100vh;
 }
 
 .smallFlex

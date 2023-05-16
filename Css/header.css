@@ -6,6 +6,7 @@ header {
   width: 100%;
   padding: 0px 40px 0px 40px;
   margin: 0;
+  z-index: 10;
   /* background-color: rgba(0, 48, 73,0.3); */
 }
 
@@ -44,12 +45,12 @@ header {
 .links a {
   margin: 35px;
   font-size: 20px;
-  transition: 500ms ease-out;
+  transition: 400ms ease-out;
 }
 
 .links a:hover,
 .links a:active {
-  margin: 40px;
+  /* margin: 40px; */
   color: #D62828;
   letter-spacing: 1.1px;
   text-decoration: underline;
@@ -68,11 +69,11 @@ header {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  transition: 300ms ease-out;
+  transition: 200ms ease-out;
 }
 
 
 .download button:hover,
 .download button:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }

@@ -1,101 +1,43 @@
-let leftHandle = document.getElementById("prev");
-let rightHandle = document.getElementById("next");
-let sliderContainer = document.getElementById("sliderContainer");
+const leftHandle = document.getElementById("prev");
+const rightHandle = document.getElementById("next");
+const sliderContainer = document.getElementById("sliderContainer");
+const slider = sliderContainer.querySelector(".slider");
+const slides = slider.querySelectorAll(".box");
+const slideWidth = slides[0].offsetWidth;
+let currentPosition = 0;
 
-var translateX = 35;
+leftHandle.addEventListener("click", moveSlider.bind(null, "left"));
+rightHandle.addEventListener("click", moveSlider.bind(null, "right"));
 
-var maxX = translateX * 5;
 
-// !ger klassen InView till de objekten som är i skärmen
-function CheckSliderInView() {
-  for (let index = 0; index < sliderContainer.childNodes[3].children.length; index++) {
+function moveSlider(direction) {
+  const sliderWidth = slider.offsetWidth;
+  const maxPosition = sliderWidth - slideWidth;
+  const numSlides = slides.length;
+  const maxVisibleSlides = Math.floor(sliderWidth / slideWidth);
+  const numHiddenSlides = numSlides - maxVisibleSlides;
+  const numSlidesToSlide = Math.min(maxVisibleSlides, numHiddenSlides)/2; // Number of new slides to show
 
-    if (isInViewport(sliderContainer.childNodes[3].children[index])) {
-      sliderContainer.childNodes[3].children[index].classList.add('InView');
+  let targetPosition;
+
+  if (direction === "left") {
+    if (currentPosition <= 0) {
+      targetPosition = maxPosition; // Go to the end if at the start
+    } else {
+      targetPosition = Math.max(currentPosition - (numSlidesToSlide * slideWidth), 0);
     }
-
-    else if (!isInViewport(sliderContainer.childNodes[3].children[index])) {
-      sliderContainer.childNodes[3].children[index].classList.remove('InView');
+  } else if (direction === "right") {
+    if (currentPosition >= maxPosition) {
+      targetPosition = 0; // Go back to the start if at the end
+    } else {
+      targetPosition = Math.min(currentPosition + (numSlidesToSlide * slideWidth), maxPosition);
     }
-
+  } else {
+    return; // No new elements are visible or invalid direction, exit the function
   }
+
+  currentPosition = targetPosition;
+
+  slider.style.transition = "transform 0.6s ease"; // Adjust the transition duration here
+  slider.style.transform = `translateX(-${currentPosition}px)`;
 }
-
-// !Kollar om objekten är i skärmen
-function isInViewport(elem) {
-  var bounding = elem.getBoundingClientRect();
-  return (
-    bounding.left >= 0 &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// !Resizar saker
-function ResizeSliderSize() {
-  for (let index = 0; index < document.querySelectorAll(".InView").length; index++) {
-    document.querySelectorAll(".InView")[index].style.transform = "scale(0." + (9 - index) + ")";
-  }
-  console.log(document.querySelectorAll(".InView"))
-}
-
-function Timer() {
-  setTimeout(function () {
-    // !Körs funktionen om en .box har ändrats, den resizar boxen
-    CheckSliderInView();
-    ResizeSliderSize();
-    console.log("aaa")
-  }, 500);
-}
-
-
-Timer();
-
-document.addEventListener("click", e => {
-  if (e.target == leftHandle) {
-    CheckSliderInView();
-    MoveLeft();
-    Timer();
-  }
-
-  else if (e.target == rightHandle) {
-    CheckSliderInView();
-    MoveRight();
-    Timer();
-  }
-
-
-  function MoveRight() {
-    // !Går tillbaka till 1 när man är på den sista
-    if (translateX >= maxX) {
-      document.getElementById("slider").style.transform = "translateX(0%)";
-      translateX = 0;
-    }
-
-    else {
-      translateX = Math.round(translateX + 35)
-      document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
-    }
-  }
-
-  // !När man trycker på prev
-  function MoveLeft() {
-
-    // ?kommentaren är om att gå tillbaka till sista slidern
-    // if (translateX >= 0) 
-    // {
-    //   document.getElementById("slider").style.transform = "translateX(-"+ maxX +"%)";
-    //   translateX = 30;
-    // }
-
-    // else if(translateX >= -maxX && translateX <= maxX)
-    // {
-    //   translateX = Math.round(translateX + 30)
-    //   document.getElementById("slider").style.transform = "translateX(-" + translateX + "%)";
-    // }
-
-    // else{
-    // }
-  }
-
-
-})
